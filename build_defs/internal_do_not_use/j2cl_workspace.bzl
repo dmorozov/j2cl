@@ -9,6 +9,7 @@ def setup_j2cl_workspace():
     closure_repositories(
         omit_com_google_protobuf = True,
         omit_com_google_auto_common = True,
+        omit_com_google_javascript_closure_compiler = True,
     )
 
     native.maven_jar(
@@ -145,8 +146,8 @@ def setup_j2cl_workspace():
     # @com_google_protobuf for protoc and proto runtimes.
     http_archive(
         name = "com_google_protobuf",
-        strip_prefix = "protobuf-3.6.1",
-        urls = ["https://github.com/google/protobuf/archive/v3.6.1.zip"],
+        strip_prefix = "protobuf-3.6.1.3",
+        urls = ["https://github.com/google/protobuf/archive/v3.6.1.3.zip"],
     )
 
     # needed for protobuf
